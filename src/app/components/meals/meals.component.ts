@@ -1,6 +1,7 @@
 // meal-list.component.ts
 import { Component, OnInit } from '@angular/core';
 import { MealService } from '../../services/meals.service';
+import { CommonModule } from '@angular/common';
 
 import {
   FormsModule,
@@ -31,7 +32,7 @@ export interface Meal {
 @Component({
   selector: 'app-meals',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './meals.component.html',
   styleUrls: ['./meals.component.css'],
 })
@@ -57,5 +58,9 @@ export class MealsComponent implements OnInit {
     this.filteredMeals = this.meals.filter((meal) =>
       meal.name.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
+  }
+
+  getDefaultImage(): string {
+    return '/assets/images/hiw-1.webp'; // path to your default image
   }
 }
