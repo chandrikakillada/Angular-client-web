@@ -63,7 +63,6 @@
           },
           "defaultConfiguration": "development"
         },
-
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
@@ -78,6 +77,14 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.css"],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/project-client-webdriver",
+            "netlifyToken": "nfp_xtTJYdmo4WqGUjhHHz225qcqD9zYQLL9c23a",
+            "siteId": ""
           }
         }
       }
