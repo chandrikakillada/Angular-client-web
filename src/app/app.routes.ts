@@ -6,6 +6,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HerosectionComponent } from './herosection/herosection.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { PlanComponent } from './plan/plan.component';
 
 export const routes: Routes = [
   { path: 'about', component: AboutUsComponent },
@@ -15,4 +16,5 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'plan', component: PlanComponent },
 ];
